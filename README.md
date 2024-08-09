@@ -31,4 +31,4 @@ To get started with the project, clone the repository and install the dependenci
 
 ```bash
 git clone https://github.com/Jameeru/access.git        
-cd accessible-website
+cd access
