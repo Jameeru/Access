@@ -3,71 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessible Website</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Accessible FAQ Section</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Accessible Header with ARIA Role -->
     <header role="banner">
-        <h1>Accessible Website</h1>
-        <nav role="navigation" aria-label="Main Navigation">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Accessible FAQ Section</h1>
     </header>
 
-    <!-- Main Content Area -->
     <main role="main">
-        <section id="home" aria-labelledby="home-heading">
-            <h2 id="home-heading">Welcome to Our Website</h2>
-            <p>We are committed to making our website accessible to everyone, including people with disabilities. If you have any trouble accessing any part of our site, please let us know. Your feedback helps us improve.</p>
-            <div class="hover-container" tabindex="0" aria-labelledby="learn-more-heading">
-                <h3 id="learn-more-heading">Hover or Focus to Learn More</h3>
-                <p class="more-content">This is additional content that becomes visible when you hover over or focus on this section. It's designed to be fully accessible for all users.Our mission is to ensure that all people, regardless of their abilities, can access and enjoy our content. We continuously work to improve our website's accessibility by following best practices and guidelines</p>
+        <section aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button id="faq1-button" aria-expanded="false" aria-controls="faq1-content">
+                    What is ARIA?
+                </button>
+                <div id="faq1-content" class="faq-content" role="region" aria-labelledby="faq1-button">
+                    <p>ARIA stands for Accessible Rich Internet Applications. It provides a way to make web content and applications more accessible to people with disabilities.</p>
+                </div>
             </div>
-            <button id="toggleButton" aria-pressed="false">Learn More</button>
-        </section>
 
-        <section id="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">About Us</h2>
-            <p>We strive to make our content accessible to everyone.</p>
-            <ul>
-              <li><strong>Text-to-Speech:</strong> Our website supports text-to-speech functionality for those who prefer auditory content consumption.</li>
-              <li><strong>Keyboard Navigation:</strong> All interactive elements can be accessed and operated using keyboard navigation, ensuring that users who cannot use a mouse can fully interact with our site.</li>
-              <li><strong>Color Contrast:</strong> We use high-contrast colors to make text readable for users with visual impairments.</li>
-              <li><strong>Alternative Text:</strong> All images on our site include descriptive alternative text for users who rely on screen readers.</li>
-              <li><strong>Resizable Text:</strong> Text on our site can be resized without loss of content or functionality, allowing users to adjust text size according to their needs.</li>
-            </ul>
-        </section>
+            <div class="faq-item">
+                <button id="faq2-button" aria-expanded="false" aria-controls="faq2-content">
+                    How does ARIA work?
+                </button>
+                <div id="faq2-content" class="faq-content" role="region" aria-labelledby="faq2-button">
+                    <p>ARIA works by adding attributes to HTML elements, which help assistive technologies understand the structure, role, and state of web content.</p>
+                </div>
+            </div>
 
-        <section id="contact" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Contact Us</h2>
-            <form aria-label="Contact Form">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required aria-required="true">
+            <div class="faq-item">
+                <button id="faq3-button" aria-expanded="false" aria-controls="faq3-content">
+                    Why is ARIA important?
+                </button>
+                <div id="faq3-content" class="faq-content" role="region" aria-labelledby="faq3-button">
+                    <p>ARIA is important because it improves web accessibility, ensuring that all users, including those with disabilities, can access and interact with web content.</p>
                 </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required aria-required="true">
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required aria-required="true"></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
+            </div>
         </section>
     </main>
 
-    <!-- Accessible Footer with ARIA Role -->
     <footer role="contentinfo">
-        <p>&copy; 2024 Accessible Website. All rights reserved.</p>
+        <p>&copy; 2024 Accessible FAQ Section</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
